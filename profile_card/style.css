@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .card-container {
     display: flex;
@@ -10,7 +11,7 @@
 }
 .card-wraper {
     width: 350px;
-    background-color: aliceblue;
+    background-color: #FAF9F6;
     margin: auto;
     padding: 30px;
     text-align: center;
