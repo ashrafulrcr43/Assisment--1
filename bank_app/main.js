@@ -1,49 +1,37 @@
-
 class BankAccount {
-    accountNumber = (Math.floor(Math.random() * 10110) +1);
-
-    ownerName = "Jon Doe";
-    balance = 100;
-    
-    deposit (amount){
+    accountNumber = Math.floor(Math.random()*101001+1);
+    ownerName = 'Karim Khan';
+    balance = 600;
+    deposit(amount){
         this.balance +=amount;
         return amount;
-      
-        
     }
-
     withdraw(amount){
-        this.balance-=amount;
+        this.balance -= amount;
         if(this.balance < 100){
-            console.log("“Insufficient funds”");
+            console.log("“Insufficient funds");
         }
         return amount;
     }
-    getBalance(balance){
-        return balance;
-    }
+    getBalance(){
+        return this.balance;
+    };
     displayAccountInfo(){
-        return (`Displays the account information: \n Account Number: ${this.accountNumber}\n Owner Name: ${this.ownerName} \nBalance: ${this.balance}`);
+        return (`Account Number:  ${this.accountNumber = (Math.floor(Math.random()*101001+1))}\n Owner Name: ${this.ownerName = 'John Doe'}\n Balance: ${this.balance}`)
+        
     }
-
 }
-const acc = new BankAccount();
-
-console.log("Account Information: ");
-console.log("Account Number: "+acc.accountNumber);
-console.log("Owner Name : "+acc.ownerName);
-
- acc.deposit(600);
- acc.withdraw(300);
-console.log("Balance: "+acc.balance);
-
+const person1 = new BankAccount();
+const person2 = new BankAccount();
+console.log("Simple Information About Account:");
+console.log("account Number: "+person1.accountNumber);
+console.log("owner Name: "+person1.ownerName);
+console.log("Balance: "+person1.balance);
 console.log("");
-console.log(acc.displayAccountInfo())
-
+console.log("Second Step Account Information:");
+person2.deposit(500);
+person2.withdraw(300);
+console.log(person2.displayAccountInfo());
 console.log("");
-console.log("depositing, withdrawing and displaying account information: \n");
-
-acc.deposit(600);
-acc.withdraw(650);
-
-console.log(" depositing: "+ acc.deposit(600) +"\n withdrawing: "+  acc.withdraw(650))
+console.log("depositing, withdrawing, and displaying account information");
+console.log("depositing: "+person2.deposit(500)+"\nwithdrawing:"+ person2.withdraw(300));
