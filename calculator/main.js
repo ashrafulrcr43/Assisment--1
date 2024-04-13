@@ -21,8 +21,8 @@
 
 function calc(){
 
-  var opt1 = document.getElementById('num1').value;
-  var opt2 = document.getElementById('num2').value;
+  var opt1 = document.getElementById('validationCustom01').value;
+  var opt2 = document.getElementById('validationCustom02').value;
   var opt3 = document.getElementById('opt').value;
 
 
@@ -39,7 +39,15 @@ function calc(){
      var res = parseInt(opt1)/ parseInt(opt2);
     
    }
-   document.getElementById('res').value= res;
+    document.getElementById('res').value = res;
+
+    if(opt1 === '' || opt2 === '' || opt3 == ''){
+        document.getElementsByClassName('alert-success')[0].innerHTML ="Empty Filed!Please Input Valid Number";
+    
+    }else if(isNaN(opt1)  || isNaN(opt2)){
+        document.getElementsByClassName('alert-success')[0].innerHTML ="Not a Number!Please Input Valid Number";
+
+    }
       
    } 
   
