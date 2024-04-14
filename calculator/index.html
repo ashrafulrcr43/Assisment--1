@@ -16,36 +16,45 @@
     
     <div class="row mt-4 mb-3">
       <div class="col-3">
-        <input id="num1" type="number" class="form-control  p-3" placeholder="Only Number" value="Mark" required>
+        <input id="validationCustom01" value="Mark" type="number" class="form-control  p-3" placeholder="Only Number" required>
+
+        <div class="invalid-feedback">
+          Please choose a Number.
+        </div>     
       </div>
-      <div class="col-3">
+      <div class="col-3"> 
         <select id="opt" class="form-control p-3" id="exampleFormControlSelect1" required>
         <option value="">Select One Operator</option>
           <option value="+">addition (+)</option>
-          <option value="-" >subtraction (-)</option>
-          <option value="*" >multiplication (*)</option>
-          <option value="/" >division (/)</option>
+          <option value="-">subtraction (-)</option>
+          <option value="*">multiplication (*)</option>
+          <option value="/">division (/)</option>
           
         </select>
+        <div class="invalid-feedback">
+          Please choose a The Oprator.
+        </div> 
       </div>
       <div class="col-3">
-        <input id="num2" type="number" class="form-control  p-3" placeholder="Only Number" value="Mark" required>
+        <input id="validationCustom02" value="Mark" type="number" class="form-control  p-3" placeholder="Only Number" required>
+
+        <div class="invalid-feedback">
+          Please choose a Number.
+        </div>     
       </div>
     </div>
-   
+
       <button type="submit" onclick="calc()" class="btn btn-primary py-3 px-5 mt-4">Calculate</button> 
 
      
     <input type="Number"class="pb-4 text-center" id="res"placeholder="Display Result"
       />
-
-     
         
       </div>
         
     </div>
-  </form>
-       
+
+  </form>  
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="main.js"></script>
