@@ -26,6 +26,16 @@ function calc() {
   var opt2 = document.getElementById("validationCustom02").value;
   var opt3 = document.getElementById("opt").value;
 
+  //Error Finding:
+  if(opt1=='' || opt2 == ''){
+    document.getElementById('error').innerHTML='Please Full up The Form';
+    document.getElementById('error').style.display='block';
+    document.getElementById('success').style.display='none';
+  }else{
+    opt1 = Number(opt1);
+    opt2 = Number(opt2);
+  }
+// Calculton process
   if (opt3 == "+") {
     var res = parseInt(opt1) + parseInt(opt2);
   } else if (opt3 == "-") {
@@ -35,5 +45,5 @@ function calc() {
   } else if (opt3 == "/") {
     var res = parseInt(opt1) / parseInt(opt2);
   }
-  document.getElementById("res").value = res;
+  document.getElementById("res").innerHTML = res;
 }
